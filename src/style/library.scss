@@ -5,10 +5,10 @@
     grid-template-rows: [title-s] 100px [title-e courses-s] repeat(auto-fit, 1fr) [courses-e];
 
     &__title {
-        grid-row: title-s/title-e;
+        // grid-row: title-s/title-e;
     }
 
-    &__courses {
-        grid-row: courses-s/courses-e;
-    }
+    // &__courses {
+    //     grid-row: courses-s/courses-e;
+    // }
 }
