@@ -6,11 +6,9 @@ export default class Library extends Component {
     return (
       <div className="library">
         <h1 className="library__title">Course Library</h1>
-        {/* <div className="library__courses"> */}
         <LibraryCourse />
         <LibraryCourse />
         <LibraryCourse />
-        {/* </div> */}
       </div>
     );
   }
