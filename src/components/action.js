@@ -5,19 +5,30 @@ export default class Action extends Component {
   constructor(props) {
     super(props);
 
+    this.status = false;
+
     this.handleAction = this.handleAction.bind(this);
   }
 
   handleAction() {
     this.props.onClick();
 
-    // document.getElementById('action').classList.add('')
+    if (!this.status) {
+        document.getElementById(this.id).classList.add("action-remove");
+    } else {
+        document.getElementById(this.id).classList.remove("action-remove");
+    }
+
+    this.status = !this.status;
+
+    
   }
 
   render() {
+      this.id = `action-${this.props.id}`
     return (
       <a
-        id="action"
+        id={this.id}
         onClick={() => this.handleAction()}
         className={`${this.props.className} action`}
       />
