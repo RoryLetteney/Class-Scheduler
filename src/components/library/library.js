@@ -19,7 +19,6 @@ class Library extends Component {
   }
 
   render() {
-    console.log(this.props.courses)
     return (
       <div className="library">
         <h1 className="library__title">Course Library</h1>
