@@ -8,7 +8,7 @@ export default class LibraryCourse extends Component {
     return (
       <div className="library-course">
         <div className="library-course__title-check">
-          <label className="library-course__title">Problem Solving</label>
+          <label className="library-course__title">{this.props.title}</label>
           {Icon("fas fa-check", "library-course__icon")}
         </div>
         <Arrow className="library-course__arrow"/>
@@ -16,11 +16,7 @@ export default class LibraryCourse extends Component {
         <div className="library-course__description">
           <label>Course Description</label>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            sagittis, lorem eget facilisis lacinia, tortor mauris congue velit,
-            non malesuada nisl lorem hendrerit mauris. Vestibulum in tellus
-            pharetra, venenatis risus at, lacinia tortor. Suspendisse aliquam
-            arcu metus, a rhoncus velit feugiat in.
+            {this.props.description}
           </p>
         </div>
       </div>
