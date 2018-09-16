@@ -12,8 +12,14 @@ export default function(state = [], action) {
             ]
         case TOGGLE_ENROLLED:
             console.log(action.payload)
+            const newCourses = state.map(course => {
+                if (course.id == action.payload) {
+                    course.enrolled = !course.enrolled;
+                }
+                return course
+            })
             return [
-                state
+                ...newCourses
             ]
         default:
             return state;
