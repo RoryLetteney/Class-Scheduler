@@ -1,28 +1,29 @@
 import React, { Component } from "react";
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
-import * as actions from '../../actions';
+import * as actions from "../../actions";
 import LibraryCourse from "./libraryCourse";
 
 class Library extends Component {
-
   componentWillMount() {
-    this.props.fetchCourses();    
+    this.props.fetchCourses();
   }
 
   renderCourses() {
-    const data = this.props.courses
+    const data = this.props.courses;
 
     return data.map((course, index) => {
-      return <LibraryCourse {...course} key={index}/>
-    })
+      return <LibraryCourse {...course} key={index} />;
+    });
   }
 
   render() {
     return (
       <div className="library">
-        <h1 className="library__title">Course Library</h1>
-        { this.renderCourses() }
+        <div className="library__container">
+          <h1 className="library__container__title">Course Library</h1>
+          {this.renderCourses()}
+        </div>
       </div>
     );
   }
@@ -31,7 +32,10 @@ class Library extends Component {
 function mapStateToProps(state) {
   return {
     courses: state.courses
-  }
+  };
 }
 
-export default connect(mapStateToProps, actions)(Library);
+export default connect(
+  mapStateToProps,
+  actions
+)(Library);
