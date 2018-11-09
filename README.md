@@ -1,5 +1,3 @@
-# React/Redux Starter Project
+> This is a simple class scheduler built with React-Redux.
 
-> Provided for the students of the [Bottega Code School](https://bottega.tech/)
-
-*Fork from [es6-webpack2-starter](https://github.com/micooz/es6-webpack2-starter)*
+> Users click on classes to show the description of said classes, add them to their cart if they decide they are interesting, and can remove classes if they change their mind.
